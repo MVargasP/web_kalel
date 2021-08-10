@@ -98,8 +98,8 @@ DATABASES = {
             'NAME': 'h43779c_aulavirtualdb',
             'USER': 'h43779c_kalel',
             'PASSWORD': 'solucioneskalel',
-            #'HOST': '91.235.129.81',
-            'HOST': 'localhost',
+            'HOST': '91.235.129.81',
+            #'HOST': 'localhost',
             'PORT': '3306',
             'OPTIONS': {
                'sql_mode': 'traditional',

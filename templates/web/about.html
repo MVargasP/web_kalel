@@ -15,8 +15,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Nosotros</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>About</li>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li>Nosotros</li>
           </ol>
         </div>
 
@@ -42,8 +42,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Our <strong>Team</strong></h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Nuestro <strong>Equipo</strong></h2>
+          <p>Conformados por un equipo especializado en sus funciones y con la mejor atencion al cliente.</p>
         </div>
 
         <div class="row">
@@ -60,8 +60,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Anibar</h4>
+                <span>Coordinador </span>
               </div>
             </div>
           </div>
@@ -78,8 +78,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Cynthia</h4>
+                <span>Asistente de Gerencia</span>
               </div>
             </div>
           </div>
@@ -96,8 +96,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Miguel Vargas</h4>
+                <span>Ing. de Sistemas</span>
               </div>
             </div>
           </div>
@@ -114,8 +114,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Litman Enciso</h4>
+                <span>Gerente General</span>
               </div>
             </div>
           </div>
@@ -130,8 +130,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Our <strong>Skills</strong></h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Nuestros <strong>Logros</strong></h2>
+          <p>Con más de 7 años de experiencia estamos abarcando gran parte del mercado, con esfuerzo y responsabilidad .</p>
         </div>
 
         <div class="row skills-content">
@@ -139,21 +139,21 @@
           <div class="col-lg-6" data-aos="fade-up">
 
             <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
+              <span class="skill">Conductores capacitados <i class="val">50 000</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
+              <span class="skill">Cursos Realizado <i class="val">36</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <span class="skill">Distritos contactados <i class="val">16</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -171,16 +171,9 @@
             </div>
 
             <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <span class="skill">Examen Medico <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
@@ -192,67 +185,9 @@
     </section><!-- End Our Skills Section -->
 
     <!-- ======= Our Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="fade-up">
+     {% include "web/section/socios.html" %}      
 
-        <div class="section-title">
-          <h2>Clients</h2>
-        </div>
-
-        <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Our Clients Section -->
+    
 
   </main><!-- End #main -->
 
