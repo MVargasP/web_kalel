@@ -32,4 +32,4 @@ provide it.
 # Set the application
 application = get_wsgi_application()
 application = PassengerPathInfoFix(application)
-application = WhiteNoise(application, root='/home/h43779c/web_kalel/staticfiles')
+application = WhiteNoise(application, root='/home/h43779c/web_kalel/public_media')
