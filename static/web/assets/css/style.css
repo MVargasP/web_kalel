@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: #0040c0;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -117,7 +117,11 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   max-height: 60px;
 }
-
+.titulosik{
+  font-family: serif;
+    font-size: 70%;
+    color: white;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1019,7 +1023,7 @@ section {
 }
 
 .skills .progress .skill {
-  padding: 0;
+  padding: 20px;
   margin: 0 0 6px 0;
   text-transform: uppercase;
   display: block;

@@ -44,11 +44,9 @@
   {% block header %}
 
     <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+    <div class="col-lg-10 col-lg-offset-1 d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{% url 'inicio' %}"><img src="{% static "web/img/logoHD.png" %}"></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="{% url 'inicio' %}" class="logo mr-auto"><img src="{% static "web/img/logo2.png" %}" width="200" alt="" class="img-fluid"><span class="titulosik">Soluciones Integrales Kalel SAC</span></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>

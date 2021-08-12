@@ -183,7 +183,7 @@ class Index(ListView):
         slider_one = Slider.objects.filter( estado=True ).first()
         servicios = Servicios.objects.filter(estado=True)[:6]
         socio = Socio.objects.all()
-        cursos= TemaVideo.objects.all().filter(estado=True)
+        cursos= TemaVideo.objects.all().filter(estado=True, publicado=True)
         programas= Programas.objects.all().filter(estado=True)
         nosotros = Web.objects.all().filter(estado=True).first()
         if slider_one:
