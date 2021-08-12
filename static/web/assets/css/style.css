@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #0040c0;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 0px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -119,8 +119,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .titulosik{
   font-family: serif;
-    font-size: 70%;
-    color: white;
+  font-size: 70%;
+  color: white;
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1568,6 +1568,11 @@ section {
   .portfolio-details .portfolio-info {
     position: static;
     margin-top: 30px;
+  }
+  .titulosik{
+  font-family: serif;
+  font-size: 15%;
+  color: white;
   }
 }
 

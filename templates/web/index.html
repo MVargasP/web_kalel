@@ -101,9 +101,9 @@
 
         <div class="row portfolio-container" data-aos="fade-up">
           {% for curso in cursos %}
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-3 col-md-6 col-sm-6 portfolio-item filter-app">
               {% if curso.imagen_referencial %}
-                <img src="{{ curso.imagen_referencial.url }}" width="100" class="img-fluid" alt="kalelsac">
+                <img src="{{ curso.imagen_referencial.url }}" width="200" class="img-fluid" alt="kalelsac">
                 
               {% endif %}
               <div class="portfolio-info">
