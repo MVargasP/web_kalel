@@ -1,0 +1,36 @@
+{% extends "web/base.html" %}
+{% block container %}
+
+	{% load qr_code %}
+
+<section class="container">
+      <div class="card">        
+     
+        <form method="POST" method="POST" class="row">
+          {% csrf_token %}
+          <div class="container">
+	          <div class="form-group">
+	            <label for="exampleFormControlSelect1">Nombre de Archivo</label>
+	            <input type="text" name="dni" class="form-control" placeholder="Escriba alguna palabra clave de la empresa a buscar"  aria-describedby="emailHelp">
+	          </div>       
+        
+          <button type="submit" class="btn btn-primary mb-2">Obtener codigo QR</button>
+           
+              
+          </div>
+        </form>
+      </div>
+
+
+<div >
+
+{% if ruta %}
+		{% qr_from_text "{{ruta}}" size="m" image_format="png" error_correction="L" %}
+{% endif %}	
+		
+</div>
+</section>
+{% endblock container %}
+
+
+
