@@ -15,7 +15,7 @@ def generate_qrcode_empresa(request):
         except Exception as e:
             return render(request,'codigoQr/qr_empresa.html',{"error":"no existe carpeta"})
         for x in contenido:
-            img = qrcode.make('static/empresa/{}/TARJETA/{}'.format(buscar,contenido), "wb")
+            img = qrcode.make('static/empresa/{}/TARJETA/{}'.format(buscar,x), "wb")
 
             f = open("static/empresa/{}/QR/{}.png".format(buscar,x), "wb")
             img.save(f)
