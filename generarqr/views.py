@@ -3,12 +3,8 @@ from django.views.generic import ListView, DetailView, View,TemplateView
 from apps.web.models import Contacto
 import os
 import shutil, sys 
-import qrcode
+#import qrcode
 
-img = qrcode.make("Hola desde Recursos Python!")
-f = open("output.png", "wb")
-img.save(f)
-f.close()
 
 def generate_qrcode_empresa(request):
     if request.method == "POST":
