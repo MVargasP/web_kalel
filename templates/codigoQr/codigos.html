@@ -25,7 +25,8 @@
 <div >
 
 {% if ruta %}
-		{% qr_from_text "{{ruta}}" size="m" image_format="png" error_correction="L" %}
+		{{ruta}}
+		{% qr_from_text ruta size="s" image_format="png" error_correction="L" %}
 {% endif %}	
 		
 </div>

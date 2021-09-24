@@ -31,7 +31,8 @@ def generate_qrcode(request):
         buscar = request.POST['dni']
         url='https://www.kalelsac.com/static/codigoqr/'
   
-        ruta=url+buscar
+        ruta="https://www.kalelsac.com/static/codigoqr/{}".format(buscar)
+        print(ruta)
         
         contexto = {
                 'ruta':ruta }
