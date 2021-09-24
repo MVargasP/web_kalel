@@ -3,8 +3,7 @@ from django.views.generic import ListView, DetailView, View,TemplateView
 from apps.web.models import Contacto
 import os
 import shutil, sys 
-#import qrcode
-
+import qrcode
 
 
 def generate_qrcode_empresa(request):
@@ -13,8 +12,10 @@ def generate_qrcode_empresa(request):
         #print(os.listdir('static/empresa/CRISTO VIENE/'))
         contenido = os.listdir('static/empresa/{}/TARJETA/'.format(buscar))
         for x in contenido:
+            img = qrcode.make('static/empresa/{}/TARJETA/{}'.format(buscar,contenido), "wb")
+
             f = open("static/empresa/{}/QR/{}.png".format(buscar,x), "wb")
-            x.save(f)
+            img.save(f)
             f.close()
 
         archivo_zip = shutil.make_archive("static/empresa/{}/comprimido/{}".format(buscar,buscar), 
