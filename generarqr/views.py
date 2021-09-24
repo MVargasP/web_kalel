@@ -38,7 +38,9 @@ def generate_qrcode_empresa(request):
                                   "static/empresa/{}/QR".format(buscar))
 
 
-            ruta="static/empresa/{}/comprimido/{}".format(buscar,buscar)
+        ruta="https://kalelsac.com/static/empresa/{}/comprimido/{}.zip".format(buscar,buscar)
+
+
         contexto = {
                 'ruta':ruta }
         return render(request,'codigoQr/qr_empresa.html',contexto)
