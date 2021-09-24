@@ -15,10 +15,10 @@ def generate_qrcode_empresa(request):
         except Exception as e:
             return render(request,'codigoQr/qr_empresa.html',{"error":"no existe carpeta"})
 
-        try:
-            os.remove('static/empresa/{}/QR'.format(buscar))
-        except:
-            os.mkdir('static/empresa/{}/QR'.format(buscar))
+        """try:
+                                    os.remove('static/empresa/{}/QR'.format(buscar))
+                                except:
+                                    os.mkdir('static/empresa/{}/QR'.format(buscar))"""
 
         for x in contenido:
             link='https://www.kalelsac.com/static/empresa/{}/TARJETA/{}'.format(buscar,x)
