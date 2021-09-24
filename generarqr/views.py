@@ -14,17 +14,31 @@ def generate_qrcode_empresa(request):
             contenido = os.listdir('static/empresa/{}/TARJETA/'.format(buscar))            
         except Exception as e:
             return render(request,'codigoQr/qr_empresa.html',{"error":"no existe carpeta"})
-        for x in contenido:
-            img = qrcode.make('static/empresa/{}/TARJETA/{}'.format(buscar,x), "wb")
 
-            f = open("static/empresa/{}/QR/{}.png".format(buscar,x), "wb")
+        try:
+            os.remove('static/empresa/{}/QR'.format(buscar))
+        except:
+            os.mkdir('static/empresa/{}/QR'.format(buscar))
+
+        for x in contenido:
+            link='https://www.kalelsac.com/static/empresa/{}/TARJETA/{}'.format(buscar,x)
+            #print(link)
+            img = qrcode.make(link)
+
+            f = open("static/empresa/{}/QR/{}".format(buscar,x), "wb")
             img.save(f)
             f.close()
 
-        archivo_zip = shutil.make_archive("static/empresa/{}/comprimido/{}".format(buscar,buscar), 
+
+        try:
+            os.remove("static/empresa/{}/comprimido/{}".format(buscar,buscar))
+        except:
+            archivo_zip = shutil.make_archive("static/empresa/{}/comprimido/{}".format(buscar,buscar), 
                                   "zip", 
                                   "static/empresa/{}/QR".format(buscar))
-        ruta="static/empresa/{}/comprimido/{}".format(buscar,buscar)
+
+
+            ruta="static/empresa/{}/comprimido/{}".format(buscar,buscar)
         contexto = {
                 'ruta':ruta }
         return render(request,'codigoQr/qr_empresa.html',contexto)
