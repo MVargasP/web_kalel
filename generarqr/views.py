@@ -10,7 +10,10 @@ def generate_qrcode_empresa(request):
     if request.method == "POST":
         buscar = request.POST['dni']
         #print(os.listdir('static/empresa/CRISTO VIENE/'))
-        contenido = os.listdir('static/empresa/{}/TARJETA/'.format(buscar))
+        try:
+            contenido = os.listdir('static/empresa/{}/TARJETA/'.format(buscar))            
+        except Exception as e:
+            return render(request,'codigoQr/qr_empresa.html',{"error":"no existe carpeta"})
         for x in contenido:
             img = qrcode.make('static/empresa/{}/TARJETA/{}'.format(buscar,contenido), "wb")
 
