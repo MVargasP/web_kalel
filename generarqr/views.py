@@ -4,6 +4,7 @@ from apps.web.models import Contacto
 import os
 import shutil, sys 
 import qrcode
+
 img = qrcode.make("Hola desde Recursos Python!")
 f = open("output.png", "wb")
 img.save(f)
