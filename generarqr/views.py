@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView, View,TemplateView
 from apps.web.models import Contacto
 import os
 import shutil, sys 
-import qrcode
+#import qrcode
 
 
 
